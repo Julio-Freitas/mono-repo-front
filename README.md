@@ -15,9 +15,7 @@
   <br/>
   <br/>
     <div>
-      <h1>Open Source</h1>
-      <sub>Copyright © 2023 - <a href="https://github.com/Julio-Freitas">iuricode</sub></a>
+      <sub>Copyright © 2023 - <a href="https://github.com/Julio-Freitas">julioFreitas</sub></a>
     </div>
-    <br/>
-    💖
+
 </div>
