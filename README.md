@@ -1,12 +1,12 @@
 <h1 align="center">
-📄<br>Readme Template
+📄<br>Readme
 </h1>
 
-## 📚 Ebook
+## 📚 FRONTEND
 
 > Working whith frontend architecute
 
-- eFront - Estudando frontend. [curso alura](https://cursos.alura.com.br/course/nextjs-arquitetura-front-end)
+-ALURA: Next.js rquitetura Front-end:. [curso alura](https://cursos.alura.com.br/course/nextjs-arquitetura-front-end)
 
 ---
 
