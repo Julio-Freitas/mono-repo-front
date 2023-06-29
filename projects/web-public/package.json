@@ -1,0 +1,25 @@
+{
+    "name": "@alura/web-public",
+    "version": "1.0.0",
+    "main": "index.js",
+    "author": "julio.freitas",
+    "license": "MIT",
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "lint": "next lint"
+    },
+    "dependencies": {
+        "@alura/ds": "*",
+        "@alura/utils": "*",
+        "next": "^12.1.5",
+        "react": "^18.1.0",
+        "react-dom": "^18.1.0",
+        "next-compose-plugins": "2.2.1",
+        "next-transpile-modules": "9.0.0"
+    },
+    "devDependencies": {
+        "@alura/tsconfig-commons": "*"
+    }
+}
