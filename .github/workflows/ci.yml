@@ -1,49 +1,24 @@
 name: continus integration com mono-repo
-stages:
-  - prepare
-  - test
-  - build
-  - deploy
-
-
+run-name: ${{ github.actor }} is learning GitHub Actions
 on:
   push:
     branches: ["main"]
   pull_request:
     branches: ["main"]
+jobs:
+  run-tests:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [16.x]
+        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
-prepare_install:
-  stage: prepare
-  cache:
-    <<: *global_cache
-    policy: pull-push
-  script:
-    - cd src
-    - \[ -f localesConfig.js \] || exit -1
-    - cd ..
-    - yarn install --frozen-lockfile
-
-run-tests:
-  stage: test
-  cache:
-    <<: *global_cache
-  script:
-      - yarn  test:web-public
-
-
-# run-tests:
-#   runs-on: ubuntu-latest
-#   strategy:
-#     matrix:
-#       node-version: [16.x]
-#       # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
-
-#   steps:
-#     - uses: actions/checkout@v3
-#     - name: Use Node.js ${{ matrix.node-version }}
-#       uses: actions/setup-node@v3
-#       with:
-#         node-version: ${{ matrix.node-version }}
-#     - run: yarn install
-#     - run: yarn  test:web-public
-#     - run: yarn  test:utils
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+      - run: yarn install
+      - run: yarn  test:web-public
+      - run: yarn  test:
