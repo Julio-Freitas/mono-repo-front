@@ -1,5 +1,5 @@
 name: continus integration com mono-repo
-run-name: ${{ github.actor }} is learning GitHub Actions
+run-name: learning GitHub Actions
 on:
   push:
     branches: ["main"]
